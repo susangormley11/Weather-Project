@@ -1,4 +1,6 @@
 .container {
+  color: #ffffcc;
+  font-family: "Josefin Sans", sans-serif;
   max-width: 450px;
   margin-top: 50px;
   border: 2px solid orange;
