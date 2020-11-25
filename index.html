@@ -16,15 +16,15 @@
 </head>
 <body>
 <div class="container">
-    <form id="search-form">
-        <input type="search" placeholder="Enter a city" id="city-search"/>
-        <input type="submit" value="Search"/>
+    <form id="search-form" class="search-form">
+        <input type="search" placeholder="Enter a city" id="city-search" class="city-input"/>
+        <input type="submit" value="Search" class="search-button"/>
     </form>
-    <button id="current-location">
+    <button class="current-location" id="current-location">
         Current Location
     </button>
     <div class="row">
-     <div class="col-">
+     <div class="col">
         <h1 id="city-heading">
         London
         </h1>
@@ -38,7 +38,7 @@
         </li>
         </ul>
     </div>
-    <div class="col-5">
+    <div class="col">
     <h2><span id="temperature">
         26</span><span id="unit">℃</span>
         <a href="#" id="farenheit-link">F</a>

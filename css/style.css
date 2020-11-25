@@ -8,23 +8,31 @@
   padding: 20px;
   background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
 }
+.current-location,
+.search-button,
+.city-input {
+  border-radius: 5px;
+  background-color: #ffffcc;
+  color: #fc6076;
+  border: solid 2px #fc6076;
+  padding-top: 3px;
+}
+.city-input {
+  width: 44%;
+}
+.search-form {
+  display: inline;
+}
 h1 {
-  font-size: 52px;
+  font-size: 60px;
   margin: 16px 0;
 }
 h2 {
-  font-size: 52px;
+  font-size: 60px;
   padding: 0;
   margin: 16px 0;
 }
 ul {
   list-style: none;
   padding: 0;
-}
-.city-search {
-  width: 82%;
-  border-radius: 5px;
-}
-input[type="submit"] {
-  float: right;
 }
