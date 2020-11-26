@@ -32,7 +32,8 @@ function updateWeather(response) {
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector("h2").innerHTML = response.data.main.temp;
   document.querySelector("#condition").innerHTML = response.data.weather[0].description;
-  document.querySelector("#icon").innerHTML = response.data.weather[0].icon;
+  let icon="#icon";
+  icon.setAttribute("src", "http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png");
 }
 function search(event) {
   event.preventDefault();
