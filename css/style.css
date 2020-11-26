@@ -24,13 +24,17 @@
   display: inline;
 }
 h1 {
-  font-size: 60px;
+  font-size: 70px;
+  text-size-adjust: 50%;
   margin: 16px 0;
 }
 h2 {
-  font-size: 60px;
+  font-size: 70px;
   padding: 0;
   margin: 16px 0;
+}
+.unit {
+  font-size: 30px;
 }
 ul {
   list-style: none;

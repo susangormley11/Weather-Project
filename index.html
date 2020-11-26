@@ -23,34 +23,35 @@
     <button class="current-location" id="current-location">
         Current Location
     </button>
-    <div class="row">
-     <div class="col">
+    
         <h1 id="city-heading">
         London
         </h1>
-        <ul>
+        <div class="row">
+            <div class="col">
+                <ul>
             <li id="current-date">
             </li>
             <li id="current-time">
         </li>
-        <li>
+        <li id="condition">
         Sunny
         </li>
         </ul>
     </div>
     <div class="col">
     <h2><span id="temperature">
-        26</span><span id="unit">℃</span>
-        <a href="#" id="farenheit-link">F</a>
+        26</span><span class="unit" id="unit">°C|</span>
+        <a href="#" class="unit" id="farenheit-link">°F</a>
     </h2>
     <ul>
-        <li>
+        <li id="precipitation">
             Precipitation: 0%
         </li>
-        <li>
+        <li id="humidity">
             Humidity: 10%
         </li>
-        <li>
+        <li id="wind">
             Wind: 2km/h
         </li>
     </ul>
