@@ -31,8 +31,9 @@ currentTime.innerHTML = `${hours}:${minutes}`;
 function updateWeather(response) {
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector("h2").innerHTML = response.data.main.temp;
+  document.querySelector("#condition").innerHTML = response.data.weather[0].description;
+  document.querySelector("#icon").innerHTML = response.data.weather[0].icon;
 }
-
 function search(event) {
   event.preventDefault();
   let apiKey = "fcff38a5582d1660f112106f76c73655";
@@ -88,5 +89,5 @@ navigator.geolocation.getCurrentPosition(handlePosition)
 let currentPositionButton = document.querySelector("button");
 currentPositionButton.addEventListener("click", getCurrentPosition);
 
-
+//
 
