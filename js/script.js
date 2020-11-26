@@ -30,7 +30,7 @@ currentTime.innerHTML = `${hours}:${minutes}`;
 
 function updateWeather(response) {
   document.querySelector("#city-heading").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = response.data.main.temp;
+  document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
   document.querySelector("#condition").innerHTML = response.data.weather[0].description;
   let icon = document.querySelector("#icon");
   icon.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
