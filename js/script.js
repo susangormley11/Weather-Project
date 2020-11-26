@@ -29,11 +29,11 @@ currentTime.innerHTML = `${hours}:${minutes}`;
 // City Search
 
 function updateWeather(response) {
-  document.querySelector("h1").innerHTML = response.data.name;
-  document.querySelector("h2").innerHTML = response.data.main.temp;
+  document.querySelector("#city-heading").innerHTML = response.data.name;
+  document.querySelector("#temperature").innerHTML = response.data.main.temp;
   document.querySelector("#condition").innerHTML = response.data.weather[0].description;
-  let icon="#icon";
-  icon.setAttribute("src", "http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png");
+  let icon = document.querySelector("#icon");
+  icon.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 function search(event) {
   event.preventDefault();
