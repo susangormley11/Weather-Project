@@ -43,6 +43,9 @@ h2 {
   width: 105%;
   box-sizing: content-box;
 }
+.second-column {
+  padding-left: 0;
+}
 ul {
   list-style: none;
   padding: 0;
