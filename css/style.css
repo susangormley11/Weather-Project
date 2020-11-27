@@ -27,20 +27,28 @@ h1 {
   font-size: 70px;
   text-size-adjust: 50%;
   margin: 16px 0;
+  padding-top: 15px;
 }
-h2 {
-  font-size: 70px;
+.temperature {
+  font-size: 90px;
   padding: 0;
   margin: 16px 0;
 }
 .unit {
-  font-size: 30px;
+  font-size: 20px;
+  line-height: 6;
+  color: darkgray;
 }
+.unit:hover {
+  text-decoration: none;
+  color: #ffffcc;
+}
+
 .condition {
   text-transform: capitalize;
 }
 .icon {
-  width: 105%;
+  width: 100%;
   box-sizing: content-box;
 }
 .second-column {
