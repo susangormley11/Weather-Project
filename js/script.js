@@ -32,7 +32,10 @@ search("Manila");
 
 function updateWeather(response) {
   document.querySelector("#city-heading").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
+
+  celciusTemp = response.data.main.temp;
+
+  document.querySelector("#temperature").innerHTML = Math.round(celciusTemp);
   document.querySelector("#condition").innerHTML = response.data.weather[0].description;
   let icon = document.querySelector("#icon");
   icon.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
@@ -58,22 +61,28 @@ searchEngine.addEventListener("submit", submit);
 
 
 
-//Farenheit Conversion
+//Farenheit/Celcius Conversion
+
 function changeToFarenheit(event){
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   let temperature = temperatureElement.innerHTML;
-  temperatureElement.innerHTML = Math.round((temperature * 9) / 5 +32);
-  let unit = document.querySelector("#unit");
-  unit.innerHTML = "℉";
+  temperatureElement.innerHTML = Math.round((celciusTemp * 9) / 5 +32);
 }
+
+function changeToCelcius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celciusTemp);
+}
+
+let celciusTemp = null;
 
 let farenheitSwap = document.querySelector("#farenheit-link");
 farenheitSwap.addEventListener("click", changeToFarenheit);
 
-// API
-
-
+let celciusSwap = document.querySelector("#celcius-link");
+celciusSwap.addEventListener("click", changeToCelcius);
 
 // Get Current Location Button
 
