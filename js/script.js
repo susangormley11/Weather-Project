@@ -68,12 +68,15 @@ function changeToFarenheit(event){
   let temperatureElement = document.querySelector("#temperature");
   let temperature = temperatureElement.innerHTML;
   temperatureElement.innerHTML = Math.round((celciusTemp * 9) / 5 +32);
+  celciusSwap.classList.remove("active");
+  farenheitSwap.classList.add("active");
 }
 
 function changeToCelcius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celciusTemp);
+  
 }
 
 let celciusTemp = null;

@@ -34,14 +34,8 @@ h1 {
   padding: 0;
   margin: 16px 0;
 }
-.unit {
-  font-size: 20px;
-  line-height: 6;
-  color: darkgray;
-}
-.unit:hover {
-  text-decoration: none;
-  color: #ffffcc;
+.units {
+  font-size: 14px;
 }
 
 .condition {
@@ -57,4 +51,23 @@ h1 {
 ul {
   list-style: none;
   padding: 0;
+}
+
+.active {
+  color: #ffffcc;
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
+  color: #ffffcc;
+}
+a:link {
+  text-decoration: none;
+  color: #ffffcc;
+}
+a:visited {
+  color: #ffffcc;
+}
+a:hover {
+  color: orange;
 }
