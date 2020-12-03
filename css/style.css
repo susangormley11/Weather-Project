@@ -1,7 +1,7 @@
 .container {
   color: #ffffcc;
   font-family: "Josefin Sans", sans-serif;
-  max-width: 450px;
+  max-width: 460px;
   margin-top: 50px;
   border: 2px solid orange;
   border-radius: 20px;
@@ -59,6 +59,7 @@ ul {
 .active:hover {
   text-decoration: none;
   color: #ffffcc;
+  cursor: pointer;
 }
 a:link {
   text-decoration: none;

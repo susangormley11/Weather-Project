@@ -26,6 +26,7 @@ if (minutes <10) {
 let currentTime = document.querySelector("#current-time");
 currentTime.innerHTML = `${hours}:${minutes}`;
 
+
 // City Search
 
 search("Manila");
@@ -42,20 +43,13 @@ function updateWeather(response) {
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
  
-}
-
-function displayForcast(response) {
-  console.log(response.data);
-}
+} 
 
 function search(city) {
   let apiKey = "fcff38a5582d1660f112106f76c73655";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   
   axios.get(apiUrl).then(updateWeather);
-
-  let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayForcast);
 }
 function submit(event) {
   event.preventDefault();
@@ -65,8 +59,6 @@ function submit(event) {
 
 let searchEngine = document.querySelector("#search-form");
 searchEngine.addEventListener("submit", submit);
-
-
 
 //Farenheit/Celcius Conversion
 
@@ -83,7 +75,6 @@ function changeToCelcius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celciusTemp);
-  
 }
 
 let celciusTemp = null;
