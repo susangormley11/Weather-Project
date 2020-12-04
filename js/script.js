@@ -90,7 +90,7 @@ celciusSwap.addEventListener("click", changeToCelcius);
 function showLocationTemperature(response) {
 let temperature = Math.round(response.data.main.temp);
 let h2 = document.querySelector("h2");
-h2.innerHTML = `${temperature}`;
+h2.innerHTML = `${temperature}°C`;
 }
 
 function handlePosition(position) {
